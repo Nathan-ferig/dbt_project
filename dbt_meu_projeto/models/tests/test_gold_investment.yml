@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: gold_investment
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "tv >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "radio >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "ooh >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "meta >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "google >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "tiktok >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "display_video >= 0"
+    columns:
+      - name: tv
+        tests:
+          - not_null
+      - name: radio
+        tests:
+          - not_null
+      - name: ooh
+        tests:
+          - not_null
+      - name: meta
+        tests:
+          - not_null
+      - name: google
+        tests:
+          - not_null
+      - name: tiktok
+        tests:
+          - not_null
+      - name: display_video
+        tests:
+          - not_null

@@ -1,0 +1,12 @@
+
+version: 2
+
+models:
+  - name: gold_auxiliar
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "holiday in (0, 1)"
+    columns:
+      - name: holiday
+        tests:
+          - not_null

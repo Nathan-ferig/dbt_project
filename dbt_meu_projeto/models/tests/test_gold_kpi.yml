@@ -1,0 +1,12 @@
+
+version: 2
+
+models:
+  - name: gold_kpi
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "sales >= 0"
+    columns:
+      - name: sales
+        tests:
+          - not_null

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: sample_data
+    database: meu-projeto-dbt
+    schema: sample_data
+    tables:
+      - name: marketing_data

@@ -1,0 +1,11 @@
+
+meu_projeto_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: "meu-projeto-dbt"
+      dataset: "meu_dataset"
+      threads: 4
+      location: US
