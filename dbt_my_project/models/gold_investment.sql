@@ -2,10 +2,10 @@ WITH gold AS (
     SELECT * FROM {{ ref('silver_investment') }}
 ),
 
-preenchido AS (
+filled AS (
     SELECT
         date,
-        {{ coalesce_todas_colunas(['tv', 'radio', 'ooh', 'meta', 'google', 'tiktok', 'digital'], 0) }}
+        {{ coalesce_all_columns(['tv', 'radio', 'ooh', 'meta', 'google', 'tiktok', 'digital'], 0) }}
     FROM gold
 )
 
@@ -18,4 +18,4 @@ SELECT
     google,
     tiktok,
     digital AS display_video
-FROM preenchido
+FROM filled

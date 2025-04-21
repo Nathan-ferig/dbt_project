@@ -2,13 +2,13 @@ WITH gold AS (
     SELECT * FROM {{ ref('silver_auxiliar') }}
 ),
 
-preenchido AS (
+filled AS (
     SELECT
         date,
-        {{ coalesce_todas_colunas(['holiday'], 0) }}
+        {{ coalesce_all_columns(['holiday'], 0) }}
     FROM gold
 )
 
 SELECT
     *
-FROM preenchido
+FROM filled

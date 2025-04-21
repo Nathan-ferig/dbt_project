@@ -1,4 +1,4 @@
-{% macro interpolar_sales(table_ref) %}
+{% macro interpolate_sales(table_ref) %}
     (
         SELECT
             *,
@@ -7,7 +7,7 @@
                 (
                     LAG(sales) OVER (ORDER BY date) + LEAD(sales) OVER (ORDER BY date)
                 ) / 2
-            ) AS sales_interpolado
+            ) AS interpolated_sales
         FROM {{ table_ref }}
     )
     {% endmacro %}

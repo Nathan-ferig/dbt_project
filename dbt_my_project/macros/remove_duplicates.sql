@@ -1,3 +1,3 @@
-{% macro remover_linhas_duplicadas(table) %}
+{% macro remove_duplicates(table) %}
       SELECT DISTINCT * FROM {{ table }}
     {% endmacro %}

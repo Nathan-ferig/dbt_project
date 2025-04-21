@@ -69,14 +69,22 @@ Notebook: `dbt_05_sensitive_data_check.ipynb`
 ## Folder Structure
 
 ```
-📂 dbt_projects/
-├── dbt_meu_projeto/
-│   ├── models/
+📂 dbt_project/
+├── dbt_my_project/
+│   ├── dbt_packages
 │   ├── macros/
-│   ├── tests/
+│   ├── models/
+│       └── tests/
+│   ├── target/
 │   ├── dbt_project.yml
+│   ├── profiles.yml
 │   └── packages.yml
-├── profiles.yml
+├── dbt_01_load_csv_to_bigquery.ipynb
+├── dbt_02_my_dbt_project.ipynb
+├── dbt_03_dependency_graph.ipynb
+├── dbt_04_data_validation.ipynb
+├── dbt_05_sensitive_data_check.ipynb
+├── marketing_data_generation.ipynb
 └── dbt_project_layers.png
 ```
 

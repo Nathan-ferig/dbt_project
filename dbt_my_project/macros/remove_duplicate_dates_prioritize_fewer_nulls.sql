@@ -1,4 +1,4 @@
-{% macro remover_datas_duplicadas_prioriza_menos_nulos(table,ref_col) %}
+{% macro remove_duplicate_dates_prioritize_fewer_nulls(table, ref_col) %}
     {%- set cols = dbt_utils.get_filtered_columns_in_relation(ref(ref_col)) -%}
 
     ranked AS (

@@ -2,11 +2,11 @@ WITH bronze AS (
     SELECT * FROM {{ source('sample_data', 'marketing_data') }}
 ),
 
-    sem_duplicadas AS (
-        {{ remover_linhas_duplicadas('bronze') }}
+    no_duplicates AS (
+        {{ remove_duplicates('bronze') }}
     )
 
 SELECT
     date,
-    holiday
-FROM sem_duplicadas
+    sales
+FROM no_duplicates
