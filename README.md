@@ -75,7 +75,6 @@ Notebook: `dbt_05_sensitive_data_check.ipynb`
 │   ├── macros/
 │   ├── models/
 │       └── tests/
-│   ├── target/
 │   ├── dbt_project.yml
 │   ├── profiles.yml
 │   └── packages.yml
