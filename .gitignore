@@ -7,7 +7,6 @@ __pycache__/
 target/
 dbt_modules/
 logs/
-profiles.yml
 .dbt/
 
 # C extensions
